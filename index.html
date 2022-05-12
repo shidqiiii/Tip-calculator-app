@@ -23,49 +23,55 @@
   </head>
   <body>
     <main>
+      <img id="logo" src="/images/logo.svg" alt="">
       <div class="card">
         <section id="calculator">
-          <div class="input">
+          <div class="input-bill">
             <p for="bill">Bill</p>
-            <input type="number" placeholder="0" />
+            <div class="input-value">
+              <img src="/images/icon-dollar.svg" alt="">
+              <input id="input-bill" type="number" placeholder="0"/>
+            </div>
           </div>
 
           <div class="tip">
-            <p for="tip">Select Tip %</p>
-            <div class="input-tip">
-
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
-              <input id="tip-custom" type="number" placeholder="Custom" />
+            <p>Select Tip %</p>
+            <div class="tip-button">
+              <button class="tip-amount" id="5">5%</button>
+              <button class="tip-amount" id="10">10%</button>
+              <button class="tip-amount" id="15">15%</button>
+              <button class="tip-amount" id="25">25%</button>
+              <button class="tip-amount" id="50">50%</button>
+              <input id="input-tip" type="number" placeholder="Custom" />
             </div>
           </div>
 
           <div class="people">
             <p for="people">Number of People</p>
-            <input type="number" placeholder="0" />
+            <div class="input-value">
+              <img src="/images/icon-person.svg" alt="">
+              <input id="input-people" type="number" placeholder="0" />
+            </div>
           </div>
         </section>
         <section id="sum">
-          <div class="tip-amount">
+          <div class="box">
             <div class="left">
               <h4>Tip Amount</h4>
               <p>/ person</p>
             </div>
             <div class="right">
-              <h1>$0.00</h1>
+              <h1 id="tipperson">$0.00</h1>
             </div>
           </div>
 
-          <div class="total">
+          <div class="box">
             <div class="left">
-              <h4>Tip Amount</h3>
+              <h4>Total</h3>
               <p>/ person</p>
             </div>
             <div class="right">
-              <h1>$0.00</h1>
+              <h1 id="totalperperson">$0.00</h1>
             </div>
           </div>
 
@@ -77,5 +83,7 @@
 
       <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
     </main>
+
+    <script src="/js/splitter.js"></script>
   </body>
 </html>

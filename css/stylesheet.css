@@ -29,6 +29,7 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .card section {
@@ -50,22 +51,72 @@ main {
   padding: 10px;
 }
 
+.input-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f4fafa;
+  border-radius: 5px;
+  border: 1px solid #f4fafa;
+}
+
+.input-value:hover {
+  border: 1px solid #26c0ab;
+}
+
+img {
+  min-height: 20px;
+  margin: 0 10px;
+}
+
+img#logo {
+  width: 60px;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 input {
   width: 100%;
   text-align: end;
-  background-color: #f4fafa;
-  color: #5e7a7d;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 24px;
+  background-color: #f4fafa;
+  color: #00494d;
+  outline: none;
 }
 
-input#tip-custom {
+input::-webkit-input-placeholder {
+  color: #7f9c9f;
+}
+
+input:-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+input::-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+input::placeholder {
+  color: #7f9c9f;
+}
+
+input#input-tip {
   width: 30%;
   height: 40px;
   margin: 3px 1px;
   font-size: 15px;
+}
+
+input#input-tip:hover {
+  border: 1px solid #26c0ab;
 }
 
 button {
@@ -80,10 +131,24 @@ button {
   margin: 5px 0;
 }
 
+button:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+}
+
 button#reset {
   background-color: #26c0ab;
   color: #00494d;
   width: 90%;
+}
+
+button#reset:hover {
+  background-color: #c5e4e7;
+}
+
+button.selected {
+  background-color: #26c0ab;
+  color: #00494d;
 }
 
 p {
@@ -102,8 +167,7 @@ h4 {
   margin: 0;
 }
 
-.tip-amount,
-.total {
+.box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,5 +191,11 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (max-width: 1360px) {
+  .btn-reset {
+    height: auto;
+  }
 }
 /*# sourceMappingURL=stylesheet.css.map */
