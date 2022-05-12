@@ -2,8 +2,27 @@ var bill = document.getElementById("input-bill");
 var tip = document.querySelectorAll(".tip-amount");
 var people = document.getElementById("input-people");
 var reset = document.getElementById("reset");
-let tipamount = document.getElementById("tipperson")
-let totalamount = document.getElementById("totalperperson")
+let tipamount = document.getElementById("tipperson");
+let totalamount = document.getElementById("totalperperson");
+let customtip = document.getElementById("input-tip");
+
+bill.addEventListener('keyup', number)
+people.addEventListener('keyup', number)
+
+function number() {
+    if (people.value === "" || bill.value === "") {
+        reset.disabled = true
+    }
+    if (people.value === "0") {
+        document.getElementById("error-message").style.display = "block";
+        document.getElementsByClassName("input-value")[1].style.border = "1px solid rgb(198, 45, 14)";
+    }
+    else {
+        reset.disabled = false
+        document.getElementById("error-message").style.display = "none";
+        document.getElementsByClassName("input-value")[1].style.border = "1px solid $very-light-grayish-cyan";
+    }
+}
 
 tip.forEach(tips => {
     tips.addEventListener('click', function () {
@@ -33,4 +52,5 @@ reset.addEventListener('click', function () {
     people.value = ""
     tipamount.innerHTML = "$0.00"
     totalamount.innerHTML = "$0.00"
+    reset.disabled = true
 })

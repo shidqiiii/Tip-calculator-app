@@ -82,6 +82,7 @@ img#logo {
 
 input {
   width: 100%;
+  padding: 0 10px;
   text-align: end;
   border: none;
   border-radius: 5px;
@@ -90,6 +91,11 @@ input {
   background-color: #f4fafa;
   color: #00494d;
   outline: none;
+}
+
+input::-webkit-inner-spin-button,
+input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 input::-webkit-input-placeholder {
@@ -113,6 +119,7 @@ input#input-tip {
   height: 40px;
   margin: 3px 1px;
   font-size: 15px;
+  text-align: center;
 }
 
 input#input-tip:hover {
@@ -142,8 +149,12 @@ button#reset {
   width: 90%;
 }
 
-button#reset:hover {
+button#reset:hover:not([disabled]) {
   background-color: #c5e4e7;
+}
+
+button#reset:disabled {
+  opacity: 0.3;
 }
 
 button.selected {
@@ -154,7 +165,12 @@ button.selected {
 p {
   color: #5e7a7d;
   margin: 5px;
-  font-size: 14px;
+  font-size: 12px;
+}
+
+p#error-message {
+  color: #c62d0e;
+  display: none;
 }
 
 h1 {
@@ -191,6 +207,15 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.error-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media only screen and (max-width: 1360px) {

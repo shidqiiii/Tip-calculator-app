@@ -47,7 +47,10 @@
           </div>
 
           <div class="people">
-            <p for="people">Number of People</p>
+            <div class="error-list">
+              <p>Number of People</p>
+              <p id="error-message">Can't be zero</p>
+            </div>
             <div class="input-value">
               <img src="/images/icon-person.svg" alt="">
               <input id="input-people" type="number" placeholder="0" />
@@ -76,7 +79,7 @@
           </div>
 
           <div class="btn-reset">
-            <button id="reset">RESET</button>
+            <button type="submit" id="reset" disabled>RESET</button>
           </div>
         </section>
       </div>
